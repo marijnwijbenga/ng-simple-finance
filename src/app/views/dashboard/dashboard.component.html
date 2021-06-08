@@ -1,0 +1,23 @@
+<app-page>
+  <app-heading>
+    <app-balance-total
+      [incomes]="incomes"
+      [expenditures]="expenditures"
+    ></app-balance-total>
+  </app-heading>
+  <app-section-wrapper>
+    <app-income-list class="md:w-5/12">
+      <app-total-income [incomes]="incomes"></app-total-income>
+      <app-add-income ></app-add-income>
+      <app-income-item [incomes]="incomes"></app-income-item>
+    </app-income-list>
+    <div class="w-1/12"></div>
+    <app-expenditure-list class="md:w-5/12">
+      <app-total-expenditures [expenditures]="expenditures"></app-total-expenditures>
+      <app-add-expenditure [showModal]="showModal"></app-add-expenditure>
+      <app-expenditure-item [expenditures]="expenditures"></app-expenditure-item>
+    </app-expenditure-list>
+
+  </app-section-wrapper>
+  <app-footer-wrapper></app-footer-wrapper>
+</app-page>

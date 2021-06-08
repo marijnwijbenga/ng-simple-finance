@@ -1,0 +1,23 @@
+<div class="bg-gray-50">
+  <div class="mb-4">
+    <button class="button bg-red-500 w-full" (click)="showModal = !showModal">
+      Add Expenditure
+    </button>
+  </div>
+  <div *ngIf="showModal" class="transition-all duration-1000">
+    <div class="flex flex-row flex-nowrap">
+      <div class="w-6/12 mr-4"><input type="text" id="income-name" placeholder="Name" [(ngModel)]="name"></div>
+      <div class="w-4/12"><input type="number" id="income-amount" placeholder="Amount" [(ngModel)]="amount" (keyup.enter)="addExpenditure()"></div>
+      <div class="w-2/12 pt-2 text-right">
+        <button class="button bg-red-500" (click)="addExpenditure()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-full" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

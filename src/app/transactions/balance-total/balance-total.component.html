@@ -1,0 +1,7 @@
+<div class="text-center">
+  <h1
+    class="p-4"
+    [ngClass]="{' bg-green-200 text-green-900' : totalBalance() >= 0, ' bg-red-200 text-red-900' : totalBalance() < 0}"
+
+  >total balance € {{totalBalance()}}</h1>
+</div>

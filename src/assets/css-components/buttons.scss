@@ -1,0 +1,6 @@
+.button {
+    @apply px-4 py-2 rounded font-semibold bg-green-500 text-white focus:outline-none ;
+    border: none;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
